@@ -18,16 +18,16 @@ class CartePizzeria:
         return len(self.pizzas)
 
     def add_pizza(self, pizza: Pizza):
-       
-        if pizza.name in self.pizzas:
-            raise CartePizzeriaException(f"La pizza '{pizza.name}' existe déjà sur la carte.")
-        self.pizzas[pizza.name] = pizza
+        if pizza.nom in self.pizzas:  # Utiliser `nom` au lieu de `name`
+            raise CartePizzeriaException(f"La pizza '{pizza.nom}' existe déjà sur la carte.")
+        self.pizzas[pizza.nom] = pizza
 
-    def remove_pizza(self, name: str):
-       
-        if name not in self.pizzas:
-            raise CartePizzeriaException(f"La pizza '{name}' n'existe pas sur la carte.")
-        del self.pizzas[name]
+
+    def remove_pizza(self, nom: str):
+        if nom not in self.pizzas:
+            raise CartePizzeriaException(f"La pizza '{nom}' n'existe pas sur la carte.")
+        del self.pizzas[nom]
+
 
     def __repr__(self):
         if self.is_empty():
