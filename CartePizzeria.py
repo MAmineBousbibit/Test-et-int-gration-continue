@@ -19,19 +19,6 @@ class CartePizzeria:
     def nb_desserts(self) -> int:
         return sum(isinstance(e, Dessert) for e in self.elements.values())
 
-<<<<<<< HEAD
-    def add_pizza(self, pizza: Pizza):
-        if pizza.nom in self.pizzas:  # Utiliser `nom` au lieu de `name`
-            raise CartePizzeriaException(f"La pizza '{pizza.nom}' existe déjà sur la carte.")
-        self.pizzas[pizza.nom] = pizza
-
-
-    def remove_pizza(self, nom: str):
-        if nom not in self.pizzas:
-            raise CartePizzeriaException(f"La pizza '{nom}' n'existe pas sur la carte.")
-        del self.pizzas[nom]
-
-=======
     def add(self, element):
         if element.nom in self.elements:
             raise CartePizzeriaException(f"L'élément '{element.nom}' existe déjà sur la carte.")
@@ -44,7 +31,7 @@ class CartePizzeria:
         if name not in self.elements:
             raise CartePizzeriaException(f"L'élément '{name}' n'existe pas sur la carte.")
         del self.elements[name]
->>>>>>> c1255215776a0d7c3f8872cac3dc0e6420538b8d
+
 
     def __repr__(self):
         if self.is_empty():
