@@ -1,9 +1,9 @@
 class Pizza:
-    def __init__(self, nom: str, ingredients: list, prix: float, description: str, base: str):
+    def __init__(self, nom: str, prix: float, description: str, ingredients: list, base: str):
         self.nom = nom
-        self.ingredients = ingredients
         self.prix = prix
         self.description = description
+        self.ingredients = ingredients
         self.base = base  # "tomate" ou "crème"
 
     def __repr__(self):
