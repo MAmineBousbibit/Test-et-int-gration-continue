@@ -1,6 +1,7 @@
 
-import CartePizzeriaException
-import Pizza
+from CartePizzeriaException import CartePizzeriaException
+
+from Pizza import Pizza
 
 
 class CartePizzeria:
