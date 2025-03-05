@@ -32,6 +32,7 @@ class CartePizzeria:
             raise CartePizzeriaException(f"L'élément '{name}' n'existe pas sur la carte.")
         del self.elements[name]
 
+
     def __repr__(self):
         if self.is_empty():
             return "La carte de la pizzeria est vide."
